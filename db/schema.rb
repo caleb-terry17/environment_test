@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2022_09_15_200401) do
 
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,16 +22,6 @@ ActiveRecord::Schema.define(version: 2022_09_15_200401) do
     t.string "author"
     t.date "published"
     t.decimal "price"
-  end
-
-  create_table "events", force: :cascade do |t|
-    t.string "title"
-    t.string "section"
-    t.datetime "schedule"
-    t.integer "points"
-    t.string "passcode"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "events", force: :cascade do |t|
